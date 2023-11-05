@@ -54,6 +54,7 @@ const StudentSubjects = () => {
                         <StyledTableRow>
                             <StyledTableCell>Subject</StyledTableCell>
                             <StyledTableCell>Marks</StyledTableCell>
+                            <StyledTableCell>Status</StyledTableCell>
                         </StyledTableRow>
                     </TableHead>
                     <TableBody>
@@ -65,6 +66,15 @@ const StudentSubjects = () => {
                                 <StyledTableRow key={index}>
                                     <StyledTableCell>{result.subName.subName}</StyledTableCell>
                                     <StyledTableCell>{result.marksObtained}</StyledTableCell>
+                                    <StyledTableCell>
+                                    <select
+                                        
+                                    >
+                                        <option value="open">Open</option>
+                                        <option value="inProgress" selected>In Progress</option>
+                                        <option value="completed">Completed</option>
+                                    </select>
+                                </StyledTableCell>
                                 </StyledTableRow>
                             );
                         })}
